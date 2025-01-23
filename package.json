@@ -1,0 +1,15 @@
+{
+  "name": "@pipelab/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "LICENSE.md",
+  "dependencies": {
+    "supabase": "^2.6.8"
+  }
+}
