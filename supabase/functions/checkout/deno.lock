@@ -1,0 +1,48 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@polar-sh/deno@*": "0.1.1",
+    "npm:@polar-sh/adapter-utils@0.1.1": "0.1.1",
+    "npm:@polar-sh/sdk@0.20.2": "0.20.2_zod@3.24.2"
+  },
+  "jsr": {
+    "@polar-sh/deno@0.1.1": {
+      "integrity": "ce1304303c37241f228712b66522bcab47d52b5580b5429b1d1a6b1798b65913",
+      "dependencies": [
+        "npm:@polar-sh/adapter-utils",
+        "npm:@polar-sh/sdk"
+      ]
+    }
+  },
+  "npm": {
+    "@polar-sh/adapter-utils@0.1.1": {
+      "integrity": "sha512-aN7eVGxIBR6K8TgVD5UH3NQubTDFF19Wt9w4CQjPeZtRBvRK2hqR3CiMsV1UUMMsWzAaPnj7kq5DWhv2A+TSHw==",
+      "dependencies": [
+        "@polar-sh/sdk"
+      ]
+    },
+    "@polar-sh/sdk@0.20.2_zod@3.24.2": {
+      "integrity": "sha512-Rrqt2jyg1VhO9Gfy3WpLF9bST5yxXGnNJ1a/vHw/N4CXWZNbafKjKVGI2f7t1emCosvzkT2BpIBf+b19CpUTiw==",
+      "dependencies": [
+        "standardwebhooks",
+        "zod"
+      ]
+    },
+    "@stablelib/base64@1.0.1": {
+      "integrity": "sha512-1bnPQqSxSuc3Ii6MhBysoWCg58j97aUjuCSZrGSmDxNqtytIi0k8utUenAwTZN4V5mXXYGsVUI9zeBqy+jBOSQ=="
+    },
+    "fast-sha256@1.3.0": {
+      "integrity": "sha512-n11RGP/lrWEFI/bWdygLxhI+pVeo1ZYIVwvvPkW7azl/rOy+F3HYRZ2K5zeE9mmkhQppyv9sQFx0JM9UabnpPQ=="
+    },
+    "standardwebhooks@1.0.0": {
+      "integrity": "sha512-BbHGOQK9olHPMvQNHWul6MYlrRTAOKn03rOe4A8O3CLWhNf4YHBqq2HJKKC+sfqpxiBY52pNeesD6jIiLDz8jg==",
+      "dependencies": [
+        "@stablelib/base64",
+        "fast-sha256"
+      ]
+    },
+    "zod@3.24.2": {
+      "integrity": "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="
+    }
+  }
+}

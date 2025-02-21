@@ -6,14 +6,30 @@
   "scripts": {
     "supabase:start": "supabase start",
     "supabase:functions:serve": "supabase functions serve",
-    "supabase:functions:deploy": "supabase functions deploy"
+    "supabase:functions:tunnel": "cloudflared tunnel --url http://127.0.0.1:54321",
+    "supabase:functions:deploy": "supabase functions deploy",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    "supabase:restart": "npm run supabase:stop && npm run supabase:start",
+    "supabase:reset": "supabase db reset",
+    "supabase:link": "supabase link",
+    "supabase:generate-types": "supabase gen types typescript --local --schema public > supabase/functions/_shared/database.types.ts",
+    "supabase:generate-migration": "supabase db diff | supabase migration new",
+    "supabase:generate-seed": "supabase db dump --data-only -f supabase/seed.sql",
+    "supabase:push": "supabase db push",
+    "supabase:pull": "supabase db pull"
   },
   "keywords": [],
   "author": "",
   "license": "LICENSE.md",
   "dependencies": {
-    "@polar-sh/sdk": "^0.21.3",
-    "supabase": "^2.6.8"
+    "@polar-sh/sdk": "^0.26.1",
+    "supabase": "^2.12.1"
   },
-  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+  "packageManager": "pnpm@10.2.0+sha1.5d36c5a1aae9a628a924ee9982f013ad202e1051",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "supabase"
+    ]
+  }
 }
