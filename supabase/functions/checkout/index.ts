@@ -15,8 +15,8 @@ Deno.serve(async (req) => {
     products.push("201bf8a7-efa3-42dd-970e-61a242c3c287")
   } else {
     products.push("4f3a3e6f-5195-4583-9488-e06108ac7547")
-    products.push("1505c35a-3566-4964-a57e-bbda3fa1c945")
-    products.push("133e7e09-7127-43d5-9821-5463cce9dc81")
+    // products.push("1505c35a-3566-4964-a57e-bbda3fa1c945")
+    // products.push("133e7e09-7127-43d5-9821-5463cce9dc81")
   }
 
   const authHeader = req.headers.get("Authorization")!;
