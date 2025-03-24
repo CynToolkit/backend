@@ -23,8 +23,7 @@
   "author": "",
   "license": "LICENSE.md",
   "dependencies": {
-    "@polar-sh/sdk": "^0.27.1",
-    "supabase": "^2.15.8"
+    "supabase": "2.19.7"
   },
   "packageManager": "pnpm@10.2.0+sha1.5d36c5a1aae9a628a924ee9982f013ad202e1051",
   "pnpm": {

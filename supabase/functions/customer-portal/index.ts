@@ -42,15 +42,18 @@ Deno.serve(async (req) => {
     );
   }
 
-  const row = await supabase
-    .from("polar_supabase")
-    .select("polar_id")
-    .eq("supabase_id", supabaseUserId)
-    .single();
+  // const row = await supabase
+  //   .from("polar_supabase")
+  //   .select("polar_id")
+  //   .eq("supabase_id", supabaseUserId)
+  //   .single();
 
-  console.log("row", row);
+  // console.log("row", row);
 
-  const polarId = row.data?.polar_id;
+  const polarCustomer = await polar.customers.getExternal({
+    externalId: supabaseUserId,
+  });
+  const polarId = polarCustomer.id;
   if (!polarId) {
     throw new Error("Polar ID not found");
   }

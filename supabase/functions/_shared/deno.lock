@@ -4,6 +4,7 @@
     "jsr:@supabase/supabase-js@2": "2.48.1",
     "npm:@polar-sh/sdk@*": "0.25.1_zod@3.24.2",
     "npm:@polar-sh/sdk@0.26.1": "0.26.1_zod@3.24.2",
+    "npm:@polar-sh/sdk@0.32.0": "0.32.0_zod@3.24.2",
     "npm:@supabase/auth-js@2.67.3": "2.67.3",
     "npm:@supabase/functions-js@2.4.4": "2.4.4",
     "npm:@supabase/node-fetch@2.6.15": "2.6.15",
@@ -36,6 +37,13 @@
     },
     "@polar-sh/sdk@0.26.1_zod@3.24.2": {
       "integrity": "sha512-OEaxiNJaxpeNi7LANHR5S71BAyORk6W0lwkfHcrGyMGS9VDdgXnZjB8QZ3tFSXbQvt3yZdHShX6pPC8xOxNvFw==",
+      "dependencies": [
+        "standardwebhooks",
+        "zod"
+      ]
+    },
+    "@polar-sh/sdk@0.32.0_zod@3.24.2": {
+      "integrity": "sha512-YMgnH0+TziBNNVIF88DZv2/Kpx8VCMcCfS4U8fWHfmPkBJr9lsuZos0muWX5eCThV83iZiDn4Npu/0m6FySKvw==",
       "dependencies": [
         "standardwebhooks",
         "zod"
