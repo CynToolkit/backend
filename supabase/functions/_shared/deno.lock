@@ -2,15 +2,22 @@
   "version": "4",
   "specifiers": {
     "jsr:@supabase/supabase-js@2": "2.48.1",
+    "jsr:@supabase/supabase-js@2.53.0": "2.53.0",
     "npm:@polar-sh/sdk@*": "0.25.1_zod@3.24.2",
     "npm:@polar-sh/sdk@0.26.1": "0.26.1_zod@3.24.2",
     "npm:@polar-sh/sdk@0.32.0": "0.32.0_zod@3.24.2",
+    "npm:@polar-sh/sdk@0.34.8": "0.34.8_zod@3.25.76",
     "npm:@supabase/auth-js@2.67.3": "2.67.3",
+    "npm:@supabase/auth-js@2.71.1": "2.71.1",
     "npm:@supabase/functions-js@2.4.4": "2.4.4",
+    "npm:@supabase/functions-js@2.4.5": "2.4.5",
     "npm:@supabase/node-fetch@2.6.15": "2.6.15",
     "npm:@supabase/postgrest-js@1.18.1": "1.18.1",
+    "npm:@supabase/postgrest-js@1.19.4": "1.19.4",
+    "npm:@supabase/realtime-js@2.11.15": "2.11.15_ws@8.18.2",
     "npm:@supabase/realtime-js@2.11.2": "2.11.2",
     "npm:@supabase/storage-js@2.7.1": "2.7.1",
+    "npm:@supabase/storage-js@^2.10.4": "2.10.4",
     "npm:@supabase/supabase-js@*": "2.48.1",
     "npm:@types/node@*": "22.5.4"
   },
@@ -18,12 +25,23 @@
     "@supabase/supabase-js@2.48.1": {
       "integrity": "747e85c2a546efcc9f84b343b08e10e3818d468ae214506b59dc65a36fd2d702",
       "dependencies": [
-        "npm:@supabase/auth-js",
-        "npm:@supabase/functions-js",
+        "npm:@supabase/auth-js@2.67.3",
+        "npm:@supabase/functions-js@2.4.4",
         "npm:@supabase/node-fetch",
-        "npm:@supabase/postgrest-js",
-        "npm:@supabase/realtime-js",
-        "npm:@supabase/storage-js"
+        "npm:@supabase/postgrest-js@1.18.1",
+        "npm:@supabase/realtime-js@2.11.2",
+        "npm:@supabase/storage-js@2.7.1"
+      ]
+    },
+    "@supabase/supabase-js@2.53.0": {
+      "integrity": "120459e2a5c4da51a99a66922d8b4e2a2b40ff343f4993656fc18215d2ee1aa5",
+      "dependencies": [
+        "npm:@supabase/auth-js@2.71.1",
+        "npm:@supabase/functions-js@2.4.5",
+        "npm:@supabase/node-fetch",
+        "npm:@supabase/postgrest-js@1.19.4",
+        "npm:@supabase/realtime-js@2.11.15",
+        "npm:@supabase/storage-js@^2.10.4"
       ]
     }
   },
@@ -32,21 +50,28 @@
       "integrity": "sha512-P0TIqf5pvKEinIt710K/uc1aSQItpfdbMgDGcXsRdMTOq04aMKsi9McRXqjlrPpUXPXgE7Gzbiq0odToiq5VPg==",
       "dependencies": [
         "standardwebhooks",
-        "zod"
+        "zod@3.24.2"
       ]
     },
     "@polar-sh/sdk@0.26.1_zod@3.24.2": {
       "integrity": "sha512-OEaxiNJaxpeNi7LANHR5S71BAyORk6W0lwkfHcrGyMGS9VDdgXnZjB8QZ3tFSXbQvt3yZdHShX6pPC8xOxNvFw==",
       "dependencies": [
         "standardwebhooks",
-        "zod"
+        "zod@3.24.2"
       ]
     },
     "@polar-sh/sdk@0.32.0_zod@3.24.2": {
       "integrity": "sha512-YMgnH0+TziBNNVIF88DZv2/Kpx8VCMcCfS4U8fWHfmPkBJr9lsuZos0muWX5eCThV83iZiDn4Npu/0m6FySKvw==",
       "dependencies": [
         "standardwebhooks",
-        "zod"
+        "zod@3.24.2"
+      ]
+    },
+    "@polar-sh/sdk@0.34.8_zod@3.25.76": {
+      "integrity": "sha512-9GVBaB0XlSxS/0GTPThPkWWb31vPOZr67onMC772dKjzRd7o9WJ9WTXY1d2btmFFoxqdxJutGxXptI3mmFl0aw==",
+      "dependencies": [
+        "standardwebhooks",
+        "zod@3.25.76"
       ]
     },
     "@stablelib/base64@1.0.1": {
@@ -58,8 +83,20 @@
         "@supabase/node-fetch"
       ]
     },
+    "@supabase/auth-js@2.71.1": {
+      "integrity": "sha512-mMIQHBRc+SKpZFRB2qtupuzulaUhFYupNyxqDj5Jp/LyPvcWvjaJzZzObv6URtL/O6lPxkanASnotGtNpS3H2Q==",
+      "dependencies": [
+        "@supabase/node-fetch"
+      ]
+    },
     "@supabase/functions-js@2.4.4": {
       "integrity": "sha512-WL2p6r4AXNGwop7iwvul2BvOtuJ1YQy8EbOd0dhG1oN1q8el/BIRSFCFnWAMM/vJJlHWLi4ad22sKbKr9mvjoA==",
+      "dependencies": [
+        "@supabase/node-fetch"
+      ]
+    },
+    "@supabase/functions-js@2.4.5": {
+      "integrity": "sha512-v5GSqb9zbosquTo6gBwIiq7W9eQ7rE5QazsK/ezNiQXdCbY+bH8D9qEaBIkhVvX4ZRW5rP03gEfw5yw9tiq4EQ==",
       "dependencies": [
         "@supabase/node-fetch"
       ]
@@ -76,13 +113,35 @@
         "@supabase/node-fetch"
       ]
     },
+    "@supabase/postgrest-js@1.19.4": {
+      "integrity": "sha512-O4soKqKtZIW3olqmbXXbKugUtByD2jPa8kL2m2c1oozAO11uCcGrRhkZL0kVxjBLrXHE0mdSkFsMj7jDSfyNpw==",
+      "dependencies": [
+        "@supabase/node-fetch"
+      ]
+    },
+    "@supabase/realtime-js@2.11.15_ws@8.18.2": {
+      "integrity": "sha512-HQKRnwAqdVqJW/P9TjKVK+/ETpW4yQ8tyDPPtRMKOH4Uh3vQD74vmj353CYs8+YwVBKubeUOOEpI9CT8mT4obw==",
+      "dependencies": [
+        "@supabase/node-fetch",
+        "@types/phoenix",
+        "@types/ws@8.18.1",
+        "isows",
+        "ws@8.18.2"
+      ]
+    },
     "@supabase/realtime-js@2.11.2": {
       "integrity": "sha512-u/XeuL2Y0QEhXSoIPZZwR6wMXgB+RQbJzG9VErA3VghVt7uRfSVsjeqd7m5GhX3JR6dM/WRmLbVR8URpDWG4+w==",
       "dependencies": [
         "@supabase/node-fetch",
         "@types/phoenix",
-        "@types/ws",
-        "ws"
+        "@types/ws@8.5.14",
+        "ws@8.18.0"
+      ]
+    },
+    "@supabase/storage-js@2.10.4": {
+      "integrity": "sha512-cvL02GarJVFcNoWe36VBybQqTVRq6wQSOCvTS64C+eyuxOruFIm1utZAY0xi2qKtHJO3EjKaj8iWJKySusDmAQ==",
+      "dependencies": [
+        "@supabase/node-fetch"
       ]
     },
     "@supabase/storage-js@2.7.1": {
@@ -94,31 +153,49 @@
     "@supabase/supabase-js@2.48.1": {
       "integrity": "sha512-VMD+CYk/KxfwGbI4fqwSUVA7CLr1izXpqfFerhnYPSi6LEKD8GoR4kuO5Cc8a+N43LnfSQwLJu4kVm2e4etEmA==",
       "dependencies": [
-        "@supabase/auth-js",
-        "@supabase/functions-js",
+        "@supabase/auth-js@2.67.3",
+        "@supabase/functions-js@2.4.4",
         "@supabase/node-fetch",
-        "@supabase/postgrest-js",
-        "@supabase/realtime-js",
-        "@supabase/storage-js"
+        "@supabase/postgrest-js@1.18.1",
+        "@supabase/realtime-js@2.11.2",
+        "@supabase/storage-js@2.7.1"
+      ]
+    },
+    "@types/node@22.12.0": {
+      "integrity": "sha512-Fll2FZ1riMjNmlmJOdAyY5pUbkftXslB5DgEzlIuNaiWhXd00FhWxVC/r4yV/4wBb9JfImTu+jiSvXTkJ7F/gA==",
+      "dependencies": [
+        "undici-types@6.20.0"
       ]
     },
     "@types/node@22.5.4": {
       "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
       "dependencies": [
-        "undici-types"
+        "undici-types@6.19.8"
       ]
     },
     "@types/phoenix@1.6.6": {
       "integrity": "sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A=="
     },
+    "@types/ws@8.18.1": {
+      "integrity": "sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==",
+      "dependencies": [
+        "@types/node@22.12.0"
+      ]
+    },
     "@types/ws@8.5.14": {
       "integrity": "sha512-bd/YFLW+URhBzMXurx7lWByOu+xzU9+kb3RboOteXYDfW+tr+JZa99OyNmPINEGB/ahzKrEuc8rcv4gnpJmxTw==",
       "dependencies": [
-        "@types/node"
+        "@types/node@22.5.4"
       ]
     },
     "fast-sha256@1.3.0": {
       "integrity": "sha512-n11RGP/lrWEFI/bWdygLxhI+pVeo1ZYIVwvvPkW7azl/rOy+F3HYRZ2K5zeE9mmkhQppyv9sQFx0JM9UabnpPQ=="
+    },
+    "isows@1.0.7_ws@8.18.2": {
+      "integrity": "sha512-I1fSfDCZL5P0v33sVqeTDSpcstAg/N+wF5HS033mogOVIp4B+oHC7oOCsA3axAbBSGTJ8QubbNmnIRN/h8U7hg==",
+      "dependencies": [
+        "ws@8.18.2"
+      ]
     },
     "standardwebhooks@1.0.0": {
       "integrity": "sha512-BbHGOQK9olHPMvQNHWul6MYlrRTAOKn03rOe4A8O3CLWhNf4YHBqq2HJKKC+sfqpxiBY52pNeesD6jIiLDz8jg==",
@@ -133,6 +210,9 @@
     "undici-types@6.19.8": {
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     },
+    "undici-types@6.20.0": {
+      "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
+    },
     "webidl-conversions@3.0.1": {
       "integrity": "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="
     },
@@ -146,8 +226,14 @@
     "ws@8.18.0": {
       "integrity": "sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw=="
     },
+    "ws@8.18.2": {
+      "integrity": "sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ=="
+    },
     "zod@3.24.2": {
       "integrity": "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="
+    },
+    "zod@3.25.76": {
+      "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="
     }
   }
 }

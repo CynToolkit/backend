@@ -1,3 +1,28 @@
 [tools]
 node = "22.13.1"
 deno = '2.1.10'
+
+[tasks.install]
+run = "deno install --allow-scripts=npm:supabase@2.19.7"
+
+[tasks.server]
+run = "deno run supabase:start"
+depends = ["install"]
+
+[tasks.functions]
+run = "deno run supabase:functions:serve"
+depends = ["install"]
+
+[tasks.functions-deploy]
+run = "deno run supabase:functions:deploy"
+depends = ["install"]
+
+[tasks.dev]
+run = "mise functions"
+depends = ["server"]
+
+[tasks.login]
+run = "./node_modules/supabase/bin/supabase login"
+
+[tasks.link]
+run = "./node_modules/supabase/bin/supabase link"

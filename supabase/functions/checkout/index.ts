@@ -8,15 +8,30 @@ Deno.serve(async (req) => {
   }
 
   const polarServer = Deno.env.get("POLAR_SERVER")!;
-  const products = [];
+  let products = [];
 
-  if (polarServer === "sandbox") {
-    products.push("a5172e5b-3c2a-4e93-8eb2-9675a9adfdcd");
-    products.push("201bf8a7-efa3-42dd-970e-61a242c3c287");
-  } else {
-    products.push("4f3a3e6f-5195-4583-9488-e06108ac7547");
-    // products.push("1505c35a-3566-4964-a57e-bbda3fa1c945")
-    // products.push("133e7e09-7127-43d5-9821-5463cce9dc81")
+  // Parse request body to get item IDs if provided
+  if (req.method === "POST") {
+    try {
+      const body = await req.json();
+      if (body?.itemIds && Array.isArray(body.itemIds) && body.itemIds.length > 0) {
+        products = body.itemIds;
+      }
+    } catch (error) {
+      console.error("Error parsing request body:", error);
+    }
+  }
+
+  // Fall back to hardcoded products if none were provided in the request
+  if (products.length === 0) {
+    if (polarServer === "sandbox") {
+      products.push("a5172e5b-3c2a-4e93-8eb2-9675a9adfdcd");
+      products.push("201bf8a7-efa3-42dd-970e-61a242c3c287");
+    } else {
+      products.push("4f3a3e6f-5195-4583-9488-e06108ac7547");
+      // products.push("1505c35a-3566-4964-a57e-bbda3fa1c945")
+      // products.push("133e7e09-7127-43d5-9821-5463cce9dc81")
+    }
   }
 
   const authHeader = req.headers.get("Authorization")!;
